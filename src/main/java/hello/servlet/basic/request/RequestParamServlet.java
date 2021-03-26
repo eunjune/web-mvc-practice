@@ -17,9 +17,14 @@ public class RequestParamServlet extends HttpServlet {
         request.getParameterNames().asIterator()
                 .forEachRemaining(paramName -> System.out.println(paramName + "=" + request.getParameter(paramName)));
 
+        /*
+        * GET 파라미터, POST BODY 모두 받음
+        * */
         String username = request.getParameter("username");
         String age = request.getParameter("age");
 
         String[] usernames = request.getParameterValues("username");
+
+
     }
 }
